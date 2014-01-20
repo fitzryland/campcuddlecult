@@ -88,6 +88,13 @@ function campcuddlecult_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'campcuddlecult_scripts' );
 
+function load_fonts() {
+	wp_register_style('googleFonts', 'http://fonts.googleapis.com/css?family=Raleway:100,400');
+	wp_enqueue_style( 'googleFonts');
+}
+
+add_action('wp_print_styles', 'load_fonts');
+
 /**
  * Implement the Custom Header feature.
  */
