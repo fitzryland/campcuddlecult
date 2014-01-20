@@ -1,0 +1,20 @@
+/*
+Theme Name: campcuddlecult
+Theme URI: http://underscores.me/
+Author: Fitz Ryland
+Author URI: http://workwith.fitz.to/
+Description: A theme to facilitate the formation of Camp Cuddle Cult a Burning Man camp.
+Version: 1.0
+License: GNU General Public License
+License URI: license.txt
+Text Domain: campcuddlecult
+Domain Path: /languages/
+Tags:
+*/
+@import 'scss/bourbon/bourbon';
+@import 'scss/neat/neat';
+@import 'scss/global';
+@import 'scss/layout';
+@import 'scss/base';
+@import 'scss/component';
+// @import 'scss/';
