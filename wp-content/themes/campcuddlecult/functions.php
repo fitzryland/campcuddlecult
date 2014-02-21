@@ -109,8 +109,8 @@ function paypal_shortcode_function( $atts ) {
 				<input TYPE="submit" name="submit" value="Donate">
 				<input TYPE="hidden" name="business" value="cuddlecult2014@gmail.com">
 				<input TYPE="hidden" name="item_name" value="Donation to Camp Cuddle Cult!">
-				<input TYPE="hidden" name="return" value="http://www.campcuddlecult.org/thank-you/">
-				<input TYPE="hidden" name="cancel_return" value="http://www.campcuddlecult.org/donation-canceled/">
+				<input TYPE="hidden" name="return" value="http://www.campcuddlecult.com/thank-you/">
+				<input TYPE="hidden" name="cancel_return" value="http://www.campcuddlecult.com/donation-canceled/">
 				<img alt="" border="0" width="1" height="1" src="https://www.paypal.com/en_US/i/scr/pixel.gif" >
 			</form>
 		</div><!--.donation-form-wrap-->';
