@@ -597,8 +597,9 @@ h5 {
 h6 {
   font-size: 1.2em; }
 
-.page-template-template-holding-php .site-title, .page-template-template-holding-php .site-description {
+.site-title, .site-description, .site-content {
   text-align: center; }
 
-.site-content {
-  text-align: center; }
+.site-title a {
+  color: white;
+  text-decoration: none; }

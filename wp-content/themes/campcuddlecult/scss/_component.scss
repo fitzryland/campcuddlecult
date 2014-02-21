@@ -1,8 +1,9 @@
-.page-template-template-holding-php {
-	.site-title, .site-description {
-		text-align: center;
-	}
-}
-.site-content {
+.site-title, .site-description, .site-content {
 	text-align: center;
+}
+.site-title {
+	a {
+		color: white;
+		text-decoration: none;
+	}
 }

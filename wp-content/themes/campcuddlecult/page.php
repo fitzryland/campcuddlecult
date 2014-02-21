@@ -17,13 +17,21 @@ get_header(); ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php get_template_part( 'content', 'page' ); ?>
+			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+				<div class="entry-content">
+					<?php the_content(); ?>
+				</div><!-- .entry-content -->
+			</article><!-- #post-## -->
+
+
+				<?php // get_template_part( 'content', 'page' ); ?>
 
 				<?php
 					// If comments are open or we have at least one comment, load up the comment template
-					if ( comments_open() || '0' != get_comments_number() ) :
-						comments_template();
-					endif;
+					// if ( comments_open() || '0' != get_comments_number() ) :
+					// 	comments_template();
+					// endif;
 				?>
 
 			<?php endwhile; // end of the loop. ?>
@@ -31,5 +39,5 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
+<?php // get_sidebar(); ?>
 <?php get_footer(); ?>
