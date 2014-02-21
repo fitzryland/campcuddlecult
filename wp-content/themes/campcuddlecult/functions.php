@@ -95,6 +95,30 @@ function load_fonts() {
 
 add_action('wp_print_styles', 'load_fonts');
 
+
+// add PayPal shortcode
+function paypal_shortcode_function( $atts ) {
+	$html = '<div class="donation-form-wrap">';
+	if (isset($atts['description']) && $atts['description'] != "") {
+		$html .= '<div class="donation-form-description">' . $atts['description'] . '</div>';
+	}
+	$html .= '<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+				<input type="hidden" name="cmd" value="_donations">
+				<label for="amount">$</label>
+				<input TYPE="text" name="amount" value="" size="5">
+				<input TYPE="submit" name="submit" value="Donate">
+				<input TYPE="hidden" name="business" value="cuddlecult2014@gmail.com">
+				<input TYPE="hidden" name="item_name" value="Donation to Camp Cuddle Cult!">
+				<input TYPE="hidden" name="return" value="http://www.campcuddlecult.org/thank-you/">
+				<input TYPE="hidden" name="cancel_return" value="http://www.campcuddlecult.org/donation-canceled/">
+				<img alt="" border="0" width="1" height="1" src="https://www.paypal.com/en_US/i/scr/pixel.gif" >
+			</form>
+		</div><!--.donation-form-wrap-->';
+	return $html;
+}
+add_shortcode('donate', 'paypal_shortcode_function');
+
+
 /**
  * Implement the Custom Header feature.
  */
